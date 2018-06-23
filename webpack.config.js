@@ -35,6 +35,17 @@ var config = {
 
 		]
 	},
+	//配置路径
+	resolve	: {
+		alias : {
+			node_modules	: __dirname + '/node_modules',
+			util 			: __dirname + '/src/util',
+			page 			: __dirname + '/src/page',
+			service 		: __dirname + '/src/service',
+			image 			: __dirname + '/src/image'
+			
+		}
+	},
 	plugins : [
 	//独立通用模块到js/base.js
 		new webpack.optimize.CommonsChunkPlugin({

@@ -1,10 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<%= require('html-loader!./layout/html-head.html')%>
+<head>
+<%= require('html-loader!./layout/head-common.html')%>
+<title>happmmall电商平台</title>
+</head>
 <body>
-hello 123
-<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js" >
-</script>
+<div>
+<i class="fa fa-user"></i>
+</div>
+<%= require('html-loader!./layout/footer.html')%>
 
 </body>
 </html>
