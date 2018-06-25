@@ -3,20 +3,25 @@ var Hogan = require('hogan.js');
 var conf = {
 	serverHost : ''
 };
+/*请求后台数据JS工具类*/
 var _mm = {
+	//请求后台数据
 	request : function(param){
+		
 		var _this = this;
+		//使用ajax请求后端数据
 		$.ajax({
-			type 		: param.method || 'get',
-			url	 		: param.url	   || '',
-			dataType	: param.type   || 'json',
-			data		: param.data   || '',
-			success		: function(res){//操作成功会返回一个相对应的函数
+			type 		: param.method || 'get',//	请求方法
+			url	 		: param.url	   || '',//请求路径
+			dataType	: param.type   || 'json',//请求数据类型。默认JSON格式
+			data		: param.data   || '',//请求时传递给后台的数据
+			//数据请求后台会返回一个函数回应
+			success		: function(res){
 				//如果status的值等于0代表操作成功
 				if(0 === res.status){
 					//typeof param.success返回一个字符串
 					
-					//判断param中的success是否是字符串function
+					//判断param中的success是否是function函数
 					//只有操作成功的状态下才能将数据或错误信息返回回去
 					typeof param.success === 'function' && param.success(res.data,res.msg);	
 				//若是未登录状态，则需要强制登录
