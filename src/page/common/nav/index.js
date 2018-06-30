@@ -19,11 +19,11 @@ var nav = {
 			_mm.doLogin();
 		});
 		//注册点击事件
-		$('./js-register').click(function(){
+		$('.js-register').click(function(){
 			window.location.href = './register.html';
 			});
 		//退出点击事件
-		$('./js-logout').click(function(){
+		$('.js-logout').click(function(){
 				_user.logout(function(res){
 					window.location.reload();
 					},function(errMsg){
