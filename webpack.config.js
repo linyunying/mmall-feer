@@ -18,10 +18,11 @@ var getHtmlConfig 	  = function(name,title){
 var config = {
 	//页面入口文件
 	entry : {
-		'common'	: ['./src/page/common/index.js'],
-		'index' 	: ['./src/page/index/index.js'],
-		'login' 	: ['./src/page/login/index.js'],
-		'result' 	: ['./src/page/result/index.js']
+		'common'		: ['./src/page/common/index.js'],
+		'index' 		: ['./src/page/index/index.js'],
+		'user-login' 	: ['./src/page/user-login/index.js'],
+		'user-register' : ['./src/page/user-register/index.js'],
+		'result' 		: ['./src/page/result/index.js']
 		
 	},
 	output : {
@@ -61,7 +62,8 @@ var config = {
 		new Ex("css/[name].css"),
 		//html模板的处理
 		new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
-		new HtmlWebpackPlugin(getHtmlConfig('login','用户登录')),
+		new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
+		new HtmlWebpackPlugin(getHtmlConfig('user-register','用户注册')),
 		new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
 	]
 };

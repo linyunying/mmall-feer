@@ -91,7 +91,7 @@ var _mm = {
 	doLogin : function(){
 		//后面加参数就是从哪个地方登录的，登录完毕之后重新回到该页面
 		//对参数进行锁码，以防乱码
-		window.location.href='./login.html?redirect='+ encodeURIComponent(
+		window.location.href='./user-login.html?redirect='+ encodeURIComponent(
 		window.location.href);
 	},
 	goHome : function(){
